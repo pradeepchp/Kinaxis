@@ -2,3 +2,8 @@ Modules/service-accounts/terraform.tfstate
 Modules/service-accounts/terraform.tfstate.backup
 Modules/cdf/terraform.tfstate
 Modules/cdf/terraform.tfstate.backup
+Modules/service-accounts/.terraform
+Modules/cdf/.terraform
+Modules/service-accounts/.terraform.lock.hcl
+Modules/cdf/.terraform.lock.hcl
+
