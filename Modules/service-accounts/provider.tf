@@ -10,5 +10,5 @@ terraform {
 provider "google" {
   project     = var.project-id
   region      = var.region
-  credentials = file("/Users/pradeepchc/Desktop/KInaxis_Terraform/kinaxis-service1-510a57814007.json")
+  credentials = file("/Users/marc27/kinaxis/kinaxis-service1-510a57814007.json")
 }
