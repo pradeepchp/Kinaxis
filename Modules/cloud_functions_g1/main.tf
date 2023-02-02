@@ -17,12 +17,14 @@ resource "google_cloudfunctions_function" "function" {
   available_memory_mb          = 128
   source_archive_bucket        = google_storage_bucket.bucket.name
   source_archive_object        = google_storage_bucket_object.archive.name
-  trigger_http                 = true
-  https_trigger_security_level = "SECURE_ALWAYS"
   timeout                      = 60
   entry_point                  = var.function_entry_point
   labels = {
     my-label = "my-label-value"
+  }
+  event_trigger {
+    event_type = "google.storage.object.finalize"
+    resource = google_storage_bucket.bucket.name
   }
 }
 
