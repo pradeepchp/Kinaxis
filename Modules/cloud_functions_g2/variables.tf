@@ -45,5 +45,5 @@ variable "function_entry_point" {
 }
 
 variable "bucket-trigger-name" {
-  description = "entry point to the function"
+  description = "name of the trigger Bucket"
 }
