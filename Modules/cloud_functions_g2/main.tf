@@ -11,7 +11,7 @@ resource "google_storage_bucket_object" "object" {
 }
 
 resource "google_storage_bucket" "trigger-bucket" {
-  name     = "gcf-trigger-bucket"
+  name     = var.bucket-trigger-name
   location = var.location # The trigger must be in the same location as the bucket
   uniform_bucket_level_access = true
 }
@@ -77,9 +77,9 @@ resource "google_cloudfunctions2_function" "function" {
   }
 
   service_config {
-    max_instance_count  = 3
-    min_instance_count = 1
-    available_memory    = "256M"
+    max_instance_count  = var.max-instances
+    min_instance_count  = var.min-instances
+    available_memory    = var.function-memory
     timeout_seconds     = 60
     environment_variables = {
       SERVICE_CONFIG_TEST = "config_test"

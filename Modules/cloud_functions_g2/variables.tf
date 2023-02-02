@@ -47,3 +47,15 @@ variable "function_entry_point" {
 variable "bucket-trigger-name" {
   description = "name of the trigger Bucket"
 }
+
+variable "max-instances" {
+  description = "max number of instance count"
+}
+
+variable "min-instances" {
+  description = "min number of instance count"
+}
+
+variable "function-memory" {
+  description = "memory required by the function"
+}
